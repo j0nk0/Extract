@@ -32,7 +32,7 @@ function extract {
 
             *.7z|*.arj|*.cab|*.chm|*.dmg|*.iso|*.lzh|*.msi|*.rpm|*.udf|*.wim|*.xar|*.exe|*.apk)
                          7z x ./"$n"        ;;
-            *.deb)       7z x ./"$n" & echo bb; tar -xvf ./"data.tar" ; rm data.tar ;;
+            *.deb)       7z x ./"$n"; tar -xvf ./"data.tar" ; rm data.tar ;;
             *.xz)        unxz ./"$n"        ;;
             *.exe)       cabextract ./"$n"  ;;
 
